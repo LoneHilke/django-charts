@@ -21,6 +21,8 @@ from chartinput import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.HomeView.as_view()),
+    path('', views.HomeView.as_view(), name='index'),
     path('api', views.ChartData.as_view()),
+    path('new_data/', views.new_data, name='new_data'),
+    path('chart/', views.Chart.as_view(), name='chart')
 ]
