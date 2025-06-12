@@ -1,5 +1,5 @@
-{% extends "chartinput/base.html" %}
-{% block content %}
+<!--{% extends "chartinput/base.html" %}
+{% block content %}-->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <style>
 
@@ -7,6 +7,19 @@
       background-color: turquoise;
     }
 </style>
+<body>
+  <body>
+  <div class="topnav">
+    <a href="#">HOME</a> |
+    <a href="/">Original</a> | 
+    <a href="/new_data">Tilføj data</a> | 
+    <a href="{% url 'chart' %}">Se ny data</a> |
+    <a href="#">---</a> |
+    <a href="#">---</a> |
+    <a href="#">---</a> | 
+    <a href="#"> --- </a>
+  </div>
+</body>
 <h3>Tilføj data</h3>
 
 <form action="" method="POST">
@@ -14,4 +27,4 @@
     {{ form.as_p }}
     <input type="submit" name="Tilføj nyt link">
 </form>
-{% endblock %}
+<!--{% endblock %}-->

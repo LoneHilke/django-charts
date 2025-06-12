@@ -53,7 +53,7 @@ class Chart(APIView):
  
     def get(self, request, format = None):
         year = Year.objects.all()#filter(item__in__contains = 'year')
-        data = Data.objects.all().values()
+        sail = Data.objects.all().values()
         form = YearForm()
         context = {
             #'month': month,
@@ -68,7 +68,7 @@ class Chart(APIView):
                 "month":month,
                 "Salg":salg,
              }
-        return Response(sail, context)
+        return Response(sail)
     
     def post(self, request, *args, **kwargs):
     

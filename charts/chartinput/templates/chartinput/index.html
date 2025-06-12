@@ -1,8 +1,9 @@
-{% extends 'chartinput/base.html' %}
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
+  
   <meta charset="utf-8">
   <title>chatsjs</title>
   <!-- Latest compiled and minified CSS -->
@@ -19,6 +20,17 @@
 </head>
 
 <body class="container-fluid">
+  <body>
+  <div class="topnav">
+    <a href="#">HOME</a> |
+    <a href="/">Original</a> | 
+    <a href="/new_data">Tilføj data</a> | 
+    <a href="{% url 'chart' %}">Se ny data</a> |
+    <a href="#">---</a> |
+    <a href="#">---</a> |
+    <a href="#">---</a> | 
+    <a href="#"> --- </a>
+  </div>
   <center class="row">
     <h1>implementation of <b>chartJS</b> using <b>django</b></h1>
   </center>

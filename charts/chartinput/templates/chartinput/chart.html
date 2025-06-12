@@ -15,6 +15,17 @@
 </head>
 
 <body class="container-fluid">
+  <body>
+  <div class="topnav">
+    <a href="#">HOME</a> |
+    <a href="/">Original</a> | 
+    <a href="/new_data">Tilføj data</a> | 
+    <a href="{% url 'chart' %}">Se ny data</a> |
+    <a href="#">---</a> |
+    <a href="#">---</a> |
+    <a href="#">---</a> | 
+    <a href="#"> --- </a>
+  </div>
   <center class="row">
     <h1>implementation of <b>chartJS</b> using <b>django</b></h1>
   </center>
@@ -48,8 +59,8 @@
 
 
     function drawLineGraph(data, id) {
-      var labels = data.labels;
-      var chartLabel = data.chartLabel;
+      var month = data.month;
+      var sail = data.sail;
       var chartdata = data.chartdata;
       var ctx = document.getElementById(id).getContext('2d');
       var chart = new Chart(ctx, {
@@ -58,7 +69,7 @@
 
         // The data for our dataset
         data: {
-          labels: labels,
+          month: month,
           datasets: [{
             label: chartLabel,
             backgroundColor: 'rgb(255, 100, 200)',
@@ -85,8 +96,8 @@
     }
 
     function drawBarGraph(data, id) {
-      var labels = data.labels;
-      var chartLabel = data.chartLabel;
+      var month = data.month;
+      var sail = data.sail;
       var chartdata = data.chartdata;
       var ctx = document.getElementById(id).getContext('2d');
       var myChart = new Chart(ctx, {
